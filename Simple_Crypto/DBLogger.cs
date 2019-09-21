@@ -7,9 +7,17 @@ namespace Simple_Crypto
 {
     public static class DBLogger
     {
-        public static void LogInput()
+        public static int LogInput(string input, ref Entities e)
         {
+            InputLog log = new InputLog { message = input, time = DateTime.Now };
+            try
+            {
+                e.InputLog.Add(log);
+                e.SaveChanges();
+            }
+            catch { return -1; }
 
+            return log.id;
         }
     }
 }
