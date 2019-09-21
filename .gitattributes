@@ -64,4 +64,4 @@
 ###############################################################################
 
 special-vendored-path/* linguist-vendored
-*.js linguist-vendored=false
+*.cs linguist-vendored=false
