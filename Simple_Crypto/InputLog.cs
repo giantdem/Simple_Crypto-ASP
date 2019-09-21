@@ -16,6 +16,6 @@ namespace Simple_Crypto
     {
         public int id { get; set; }
         public string message { get; set; }
-        public Nullable<System.DateTime> time { get; set; }
+        public System.DateTime time { get; set; }
     }
 }
