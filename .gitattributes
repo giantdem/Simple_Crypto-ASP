@@ -63,5 +63,5 @@
 #*.RTF   diff=astextplain
 ###############################################################################
 
-special-vendored-path/* linguist-vendored
-*.cs linguist-vendored=false
+*.cs linguist-vendored
+*.js linguist-vendored=false
