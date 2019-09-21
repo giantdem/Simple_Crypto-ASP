@@ -1,6 +1,7 @@
-﻿CREATE TABLE [dbo].[InputLog]
-(
-	[id] INT NOT NULL PRIMARY KEY, 
-    [message] NVARCHAR(MAX) NULL, 
-    [time] DATETIME NULL
-)
+﻿CREATE TABLE [dbo].[InputLog] (
+    [id]      INT            NOT NULL IDENTITY,
+    [message] NVARCHAR (MAX) NOT NULL,
+    [time]    DATETIME       NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
