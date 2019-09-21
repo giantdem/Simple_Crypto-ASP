@@ -7,9 +7,16 @@ namespace Simple_Crypto
 {
     public static class Encryptor
     {
-        public static void Encrypt()
+        public static string Encrypt(string input, ref Entities e)
         {
+            string output = "";
+            foreach (char x in input)
+            {
+                try { output += e.CryptoChars.Find(x.ToString()).newSymbol; }
+                catch { output += x; }
+            }
 
+            return output;
         }
     }
 }
