@@ -12,8 +12,8 @@ namespace Simple_Crypto
             string output = "";
             foreach (char x in input)
             {
-                try { output += e.CryptoChars.Find(x.ToString()).newSymbol; }
-                catch { output += x; }
+                string newSymbol = e.CryptoChars.Find(x.ToString())?.newSymbol;
+                if (newSymbol != null) output += newSymbol; else output += x;
             }
 
             return output;
