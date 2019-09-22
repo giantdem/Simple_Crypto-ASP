@@ -28,9 +28,13 @@ namespace Simple_Crypto.Tests
         {
             InputLog logTest = e.InputLog.Find(output);
 
-            Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
+            if (logTest != null)
+            {
+                Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
 
-            e.InputLog.Remove(logTest);
+                e.InputLog.Remove(logTest);
+            }
+
             e.SaveChanges();
         }
     }
