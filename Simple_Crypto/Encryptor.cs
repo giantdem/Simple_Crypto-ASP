@@ -13,7 +13,12 @@ namespace Simple_Crypto
             foreach (char x in input)
             {
                 string newSymbol = e.CryptoChars.Find(x.ToString())?.newSymbol;
-                if (newSymbol != null) output += newSymbol; else output += x;
+                if (newSymbol != null)
+                {
+                    if (char.IsUpper(x)) newSymbol = newSymbol.ToUpper();
+                    output += newSymbol;
+                }
+                else output += x;
             }
 
             return output;
