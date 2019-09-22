@@ -15,8 +15,8 @@ namespace Simple_Crypto.Tests
         public void EncryptTest()
         {
             Entities e = new Entities();
-            string input = "абв2г";
-            string exp_output = "тшь2щ";
+            string input = "абв2uUаВ";
+            string exp_output = "тшь2uUтЬ";
 
             string output = Encryptor.Encrypt(input, ref e);
 
