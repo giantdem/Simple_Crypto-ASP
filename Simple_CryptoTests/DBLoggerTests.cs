@@ -20,12 +20,18 @@ namespace Simple_Crypto.Tests
             int exp_output = -1;
             int output = DBLogger.LogInput(input, ref e);
 
-            InputLog logTest = e.InputLog.Find(output);
-            Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
-            e.InputLog.Remove(logTest);
-            e.SaveChanges();
+            CleanDBTests(e, output);
 
             Assert.AreNotEqual(exp_output, output);
+        }
+        public void CleanDBTests(Entities e, int output)
+        {
+            InputLog logTest = e.InputLog.Find(output);
+
+            Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
+
+            e.InputLog.Remove(logTest);
+            e.SaveChanges();
         }
     }
 }
