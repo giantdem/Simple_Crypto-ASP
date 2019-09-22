@@ -27,13 +27,11 @@ namespace Simple_Crypto.Tests
         public void CleanDBTests(Entities e, int output)
         {
             InputLog logTest = e.InputLog.Find(output);
+            if (logTest == null) return;
 
-            if (logTest != null)
-            {
-                Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
+            Console.WriteLine(logTest.id + " | " + logTest.message + " | " + logTest.time);
 
-                e.InputLog.Remove(logTest);
-            }
+            e.InputLog.Remove(logTest);
 
             e.SaveChanges();
         }
