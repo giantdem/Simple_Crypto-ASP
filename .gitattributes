@@ -64,3 +64,4 @@
 ###############################################################################
 
 *.js linguist-detectable=false
+*\MyScripts\*.js linguist-detectable=true
