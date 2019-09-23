@@ -15,6 +15,7 @@
             <input class="form-control" type="text" placeholder="Сообщение" ng-model="inputMsg"/>
         </div>
         <button type="submit" class="btn">Зашифровать</button>
+        <span class="badge" ng-show="wait">Ожидание ответа...</span>
         <div class="alert alert-danger" style="margin-top: 10px" ng-show="alert">Ошибка: {{alertMsg}}</div>
     </form>
     

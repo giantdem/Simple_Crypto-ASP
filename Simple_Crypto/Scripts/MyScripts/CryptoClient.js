@@ -23,6 +23,7 @@ SimpleCrypto.controller('CryptoController', function CryptoController($scope, Cr
         }
 
         //работа с сервисом шифрования
+        $scope.wait = true;
         CryptoService.Encrypt(input)
             .then(function (response) {
                 //успех
@@ -36,6 +37,8 @@ SimpleCrypto.controller('CryptoController', function CryptoController($scope, Cr
 
                 console.log(response.status);
                 errorAlert('не удалось получить ответ');
+            }).then(function () {
+                $scope.wait = false;
             });
     }
 });
