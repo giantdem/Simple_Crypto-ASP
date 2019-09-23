@@ -1,19 +1,18 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Simple_Crypto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Simple_Crypto.Tests
 {
     [TestClass()]
     public class EncryptorTests
     {
+        //класс тестов шифрования
+
         [TestMethod()]
         public void EncryptTest()
         {
+            //тест простого шифрования строки
+
             Entities e = new Entities();
             string input = "абв2uUаВ";
             string exp_output = "тшь2uUтЬ";

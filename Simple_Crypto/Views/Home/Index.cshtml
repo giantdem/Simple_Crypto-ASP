@@ -9,14 +9,16 @@
 <h3>Простое шифрование</h3>
 
 <div ng-app="SimpleCrypto" style="margin-top: 5px" ng-controller="CryptoController">
+    @*ввод и отправка сообщения для шифрования*@
     <form ng-submit="Encrypt(inputMsg)">
         <div class="form-group">
-            <input class="form-control" type="text" placeholder="Сообщение" ng-model="inputMsg" />
+            <input class="form-control" type="text" placeholder="Сообщение" ng-model="inputMsg"/>
         </div>
         <button type="submit" class="btn">Зашифровать</button>
         <div class="alert alert-danger" style="margin-top: 10px" ng-show="alert">Ошибка: {{alertMsg}}</div>
     </form>
-
+    
+    @* лог зашифрованных сообщений *@
     <style>
         td {
             word-wrap: break-word;

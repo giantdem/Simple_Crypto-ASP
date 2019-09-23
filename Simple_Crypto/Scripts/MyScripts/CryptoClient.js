@@ -1,12 +1,19 @@
 ﻿var SimpleCrypto = angular.module('SimpleCrypto', []);
 
 SimpleCrypto.controller('CryptoController', function CryptoController($scope, CryptoService, $timeout) {
+    //массив значений лога зашифрованных сообщений
     $scope.outputLog = [];
 
     $scope.Encrypt = function (input) {
-        var errorAlert = function(msg) {
+        //координатор работы шифрования
+
+        //функция вывода сообщения об ошибке
+        var errorAlert = function (msg) {
+            //показываем сообщение
             $scope.alert = true;
+            //указываем ошибку
             $scope.alertMsg = msg;
+            //спустя время закрываем сообщение
             $timeout(function () { $scope.alert = false; }, 3000);
         }
 
@@ -15,19 +22,26 @@ SimpleCrypto.controller('CryptoController', function CryptoController($scope, Cr
             return;
         }
 
+        //работа с сервисом шифрования
         CryptoService.Encrypt(input)
             .then(function (response) {
+                //успех
+
+                //добавляем запись в лог
                 $scope.outputLog.push({ input: input, output: response.data });
+
                 console.log(response.data);
             }, function (response) {
-                console.log(response.status);
+                //ошибка
 
+                console.log(response.status);
                 errorAlert('не удалось получить ответ');
             });
     }
 });
 
 SimpleCrypto.factory('CryptoService', ['$http', function ($http) {
+    //сервис шифрования
     var CryptoService = {};
 
     CryptoService.Encrypt = function (input) {
