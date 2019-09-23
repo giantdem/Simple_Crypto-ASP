@@ -63,5 +63,5 @@
 #*.RTF   diff=astextplain
 ###############################################################################
 
-*.js linguist-detectable=false
-*/MyScripts/*.js linguist-detectable=true
+*.js linguist-vendored=true
+*/MyScripts/*.js linguist-detectable=false
