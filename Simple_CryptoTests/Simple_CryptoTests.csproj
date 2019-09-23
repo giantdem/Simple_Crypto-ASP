@@ -98,6 +98,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBModelTest.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="connections.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="DBModelTest.edmx.diagram">
       <DependentUpon>DBModelTest.edmx</DependentUpon>
     </None>
