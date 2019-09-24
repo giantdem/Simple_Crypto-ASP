@@ -1,5 +1,5 @@
 # Simple Crypto
-Simple encryption web application (ASP.NET &amp; AngularJS)
+Simple encryption web application (ASP.NET &amp; AngularJS &amp; Bootstrap)
 
 ------------
 
