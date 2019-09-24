@@ -16,7 +16,6 @@ This web app is a simple encryption tool that replaces the Cyrillic letters with
 **GUI consists of**: input field, submit button, waiting badge, error alert, and output log table.
 
 The server accesses the database during the encryption process.
-There are several tables in the database.
 
 **CryptoChars table**:
 
