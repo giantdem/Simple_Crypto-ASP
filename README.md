@@ -3,12 +3,6 @@ Simple encryption web application (ASP.NET &amp; AngularJS &amp; Bootstrap)
 
 ------------
 
-
-**BUILD on Somee**: http://giantdem.somee.com/
-
-
-------------
-
 This web app is a simple encryption tool that replaces the Cyrillic letters with other ones from the same alphabet.
 
 ![](https://github.com/giantdem/Simple_Crypto-ASP/blob/master/RM_screenshots/RM_screenshot1.jpg?raw=true)
