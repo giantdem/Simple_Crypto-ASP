@@ -12,14 +12,12 @@ namespace Simple_Crypto.Controllers
 
         public string EncryptMsg(string input)
         {
-            //функция координации задачи шифрования
+            //function: encryption task handling
 
-            //сущности БД
             Entities e = new Entities();
 
-            //шифрование
             string response = Encryptor.Encrypt(input, ref e);
-            //лог исходного сообщения
+            //input message log
             if (DBLogger.LogInput(input, ref e) == -1) Console.WriteLine("Ошибка лога");
 
             return response;

@@ -6,12 +6,12 @@ namespace Simple_Crypto.Tests
     [TestClass()]
     public class EncryptorTests
     {
-        //класс тестов шифрования
+        //class: encryption tests
 
         [TestMethod()]
         public void EncryptTest()
         {
-            //тест простого шифрования строки
+            //test: simple string encryption
 
             Entities e = new Entities();
             string input = "абв2uUаВ";

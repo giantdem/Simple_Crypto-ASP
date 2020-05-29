@@ -4,15 +4,15 @@ namespace Simple_Crypto
 {
     public static class DBLogger
     {
-        //класс ведения лога в БД
+        //class: DB logging
 
         public static int LogInput(string input, ref Entities e)
         {
-            //функция лога входных сообщений
+            //function: input messages logging
 
-            //формирование записи
+            //row making
             InputLog log = new InputLog { message = input, time = DateTime.Now };
-            //добавление в таблицу в БД
+            //row pushing
             try
             {
                 e.InputLog.Add(log);
@@ -20,7 +20,6 @@ namespace Simple_Crypto
             }
             catch { return -1; }
 
-            //индикация успеха записи лога
             return log.id;
         }
     }

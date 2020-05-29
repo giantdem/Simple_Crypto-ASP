@@ -2,22 +2,22 @@
 {
     public static class Encryptor
     {
-        //класс шифрования
+        //class: encryption
 
         public static string Encrypt(string input, ref Entities e)
         {
-            //функция простого шифрования строки
+            //function: simple string encryption
 
             string output = "";
-            //замена символов на соответствующие из БД
+            //replacing symbols with other ones from DB
             foreach (char x in input)
             {
                 string newSymbol = e.CryptoChars.Find(x.ToString())?.newSymbol;
                 if (newSymbol != null)
                 {
-                    //обработка регистра буквы
+                    //letter case handling
                     if (char.IsUpper(x)) newSymbol = newSymbol.ToUpper();
-                    //добавление символа к конечной строке
+                    
                     output += newSymbol;
                 }
                 else output += x;
